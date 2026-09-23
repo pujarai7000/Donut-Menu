@@ -11,7 +11,12 @@ body{
 body{
     background-image:url("backy.PNG");
 }
-
-img{
-    width:300px;
+.menu-image{
+    width:250px;
+}
+.front-image{
+    width:600px;
+}
+.menu-container{
+    display:flex;
 }
