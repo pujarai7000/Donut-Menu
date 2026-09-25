@@ -19,12 +19,42 @@ body{
     width:300px;
     
 }
+.location-link{
+    display:inlineblock;
+    text-align:center;
+    padding:10px 20px;
+    border:2px solid black;
+    border-radius:8px;
+    background-color:orange;
+    
+}
+
+.location-container{
+    text-align:center;
+    
+}
+
+
 .front-image{
     width:600px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+.store-pictures {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.store-pictures img{
+    width: 450px;
+    height: 400px;
+    object-fit: cover;
 }
 .menu-container{
     display:flex;
     gap:100px;
+    border:0.5px solid black;
 }
 .pic-container{
     display:flex;
