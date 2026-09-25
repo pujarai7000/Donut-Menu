@@ -5,6 +5,9 @@ h1{
 h2{
     text-align:center;
 }
+P{
+    text-align:center;
+}
 body{
     background-color:lightyellow;
 }
@@ -12,11 +15,19 @@ body{
     background-image:url("backy.PNG");
 }
 .menu-image{
-    width:250px;
+    
+    width:300px;
+    
 }
 .front-image{
     width:600px;
 }
 .menu-container{
     display:flex;
+    gap:100px;
+}
+.pic-container{
+    display:flex;
+    gap:50px;
+    width:600px;
 }
