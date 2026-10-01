@@ -44,7 +44,7 @@ body{
 .store-pictures {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 50px;
 }
 .store-pictures img{
     width: 450px;
@@ -60,4 +60,35 @@ body{
     display:flex;
     gap:50px;
     width:600px;
+}
+
+
+@media (max-width: 768px) {
+
+
+.menu-conatiner{
+ flex-direction:column;
+ width:100%
+}
+
+.store-pictures img{
+ width: 100%;
+ height: auto;   
+}
+.pic-container{
+    flex-direction:column;
+}
+.menu-image{
+   width: 300px;
+    max-width: 90%;
+    height: auto; 
+}
+.dozen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pic-container h3 {
+    text-align: center;
+}
 }
