@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Donut Hut</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a class="logo-wrap" href="index.html" aria-label="Donut Hut home">
+            <svg class="logo-icon" viewBox="0 0 96 64" role="img" aria-hidden="true">
+            <!-- small cartoon hut -->
+            <rect x="29" y="10" width="6" height="12" rx="1" fill="#7A4A2B" stroke="#3B2417" stroke-width="2"/>
+            <polygon points="3,32 21,10 39,32" fill="#8B5A33" stroke="#3B2417" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="7" y="32" width="28" height="24" rx="2" fill="#FFE3B0" stroke="#3B2417" stroke-width="2.5"/>
+            <rect x="16" y="40" width="10" height="16" rx="2" fill="#8B5A33" stroke="#3B2417" stroke-width="2"/>
+            <circle cx="23" cy="48" r="1.2" fill="#FFE3B0"/>
+            <circle cx="21" cy="24" r="3" fill="#FFE3B0" stroke="#3B2417" stroke-width="1.5"/>
+            <!-- cartoon donut sign -->
+            <circle cx="68" cy="32" r="24" fill="#E9A95B" stroke="#3B2417" stroke-width="2.5"/>
+            <path d="M68 12c-9 0-17 6-18 14-3 3-2 8 1 10 1 8 8 14 17 14s16-6 17-14c3-2 4-7 1-10-1-8-9-14-18-14z" fill="#FF8FA3" stroke="#3B2417" stroke-width="1.5"/>
+            <circle cx="68" cy="32" r="7" fill="#C8102E" stroke="#3B2417" stroke-width="2.5"/>
+            <rect x="56" y="20" width="6" height="2.5" rx="1.2" fill="#FFFFFF" transform="rotate(-25 59 21)"/>
+            <rect x="73" y="19" width="6" height="2.5" rx="1.2" fill="#FFE066" transform="rotate(30 76 20)"/>
+            <rect x="80" y="34" width="6" height="2.5" rx="1.2" fill="#7FD6FF" transform="rotate(70 83 35)"/>
+            <rect x="52" y="35" width="6" height="2.5" rx="1.2" fill="#FFE066" transform="rotate(-60 55 36)"/>
+            <rect x="62" y="44" width="6" height="2.5" rx="1.2" fill="#FFFFFF" transform="rotate(15 65 45)"/>
+            <rect x="72" y="44" width="6" height="2.5" rx="1.2" fill="#7FD6FF" transform="rotate(-35 75 45)"/>
+        </svg>
+            <h1 class="logo">Donut Hut</h1>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html?menu=1">Back to Menu</a>
+        </nav>
+
+        <div class="cart-summary"></div>
+    </header>
+
+    <main class="cart-page">
+        <h2 class="cart-title">Your Cart</h2>
+
+        <div class="cart-layout">
+
+            <section class="cart-box" id="cart-items-box">
+                <div id="cart-items"></div>
+                <p id="cart-empty" class="cart-empty" hidden>
+                    Your cart is empty. <a href="index.html?menu=1">Go back to the menu</a>
+                </p>
+            </section>
+
+            <aside class="cart-box" id="checkout-box">
+                <h3>Order Summary</h3>
+
+                <div class="summary-row"><span>Subtotal</span><span id="sum-subtotal">$0.00</span></div>
+                <div class="summary-row"><span>Tax (<span id="tax-percent">8.25</span>%)</span><span id="sum-tax">$0.00</span></div>
+
+                <div class="tip-row">
+                    <label for="tip-select">Tip</label>
+                    <select id="tip-select" class="option-select">
+                        <option value="0">No tip</option>
+                        <option value="0.10">10%</option>
+                        <option value="0.15">15%</option>
+                        <option value="0.20">20%</option>
+                    </select>
+                </div>
+                <div class="summary-row"><span>Tip amount</span><span id="sum-tip">$0.00</span></div>
+
+                <div class="summary-row total-row"><span>Total</span><span id="sum-total">$0.00</span></div>
+
+                <form id="checkout-form" novalidate>
+                    <h3>Billing &amp; Pickup</h3>
+
+                    <label for="cust-name">Name</label>
+                    <input id="cust-name" class="text-input" type="text" autocomplete="name" required>
+
+                    <label for="cust-phone">Phone</label>
+                    <input id="cust-phone" class="text-input" type="tel" autocomplete="tel" required>
+
+                    <label for="cust-note">Order notes (optional)</label>
+                    <textarea id="cust-note" class="text-input" rows="2"></textarea>
+
+                    <fieldset class="pay-options">
+                        <legend>Payment option</legend>
+                        <label><input type="radio" name="pay" value="Pay with cash at pickup" checked> Pay with cash at pickup</label>
+                        <label><input type="radio" name="pay" value="Pay with card at pickup"> Pay with card at pickup</label>
+                    </fieldset>
+
+                    <p id="form-error" class="form-error" hidden></p>
+
+                    <button type="submit" class="add-to-cart place-order">Place Order</button>
+                </form>
+            </aside>
+
+        </div>
+
+        <section class="cart-box order-done" id="order-done" hidden>
+            <h3>Thank you! Your order is placed.</h3>
+            <div id="order-done-details"></div>
+            <a class="hero-button" href="index.html?menu=1">Back to Menu</a>
+        </section>
+    </main>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>
