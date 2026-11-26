@@ -1,129 +1,709 @@
-<link rel="stylesheet" href="style.css">
-
-<h1>Donut Hut</h1>
-<h2>910 East Grauwyler Rd, Irving ,Tx 75061</h2>
-
-<section>
-    <h2>Store Hours</h2>
-
-    <p>Tuesday - Sunday: 3:00 AM - 2:30 PM</p>
-    <p>MONDAY CLOSED!</p>
-</section>
 
 
-<div class="location-container"> 
-<a 
-class="location-link" href="https://maps.app.goo.gl/KkU7VSUEJZKyvbcB9">Visit our location to experience freshness </a>
-<h2>For everyday fresh donut</h2>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="store-pictures"> 
-
-<div  class=" pic">  
-<img class="front-image" src="Front store.jpg" alt="store upfront">
-
-</div>
-
-<div class="pics">  
-    <img class="front-image" src="years.jpg" alt="uprfront">
-</div>
-
- <div class="picture">  
- <img class="front-image" src="door.jpg" alt="uprfront">
-</div>
-
- </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Hut | Fresh Donuts & Kolaches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
 
+<body>
+
+    <!-- Navigation Bar -->
 
 
-<div class="menu-container">
+<header class="navbar">
+    <a class="logo-wrap" href="#home" aria-label="Donut Hut home">
+        <svg class="logo-icon" viewBox="0 0 96 64" role="img" aria-hidden="true">
+            <!-- small cartoon hut -->
+            <rect x="29" y="10" width="6" height="12" rx="1" fill="#7A4A2B" stroke="#3B2417" stroke-width="2"/>
+            <polygon points="3,32 21,10 39,32" fill="#8B5A33" stroke="#3B2417" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="7" y="32" width="28" height="24" rx="2" fill="#FFE3B0" stroke="#3B2417" stroke-width="2.5"/>
+            <rect x="16" y="40" width="10" height="16" rx="2" fill="#8B5A33" stroke="#3B2417" stroke-width="2"/>
+            <circle cx="23" cy="48" r="1.2" fill="#FFE3B0"/>
+            <circle cx="21" cy="24" r="3" fill="#FFE3B0" stroke="#3B2417" stroke-width="1.5"/>
+            <!-- cartoon donut sign -->
+            <circle cx="68" cy="32" r="24" fill="#E9A95B" stroke="#3B2417" stroke-width="2.5"/>
+            <path d="M68 12c-9 0-17 6-18 14-3 3-2 8 1 10 1 8 8 14 17 14s16-6 17-14c3-2 4-7 1-10-1-8-9-14-18-14z" fill="#FF8FA3" stroke="#3B2417" stroke-width="1.5"/>
+            <circle cx="68" cy="32" r="7" fill="#C8102E" stroke="#3B2417" stroke-width="2.5"/>
+            <rect x="56" y="20" width="6" height="2.5" rx="1.2" fill="#FFFFFF" transform="rotate(-25 59 21)"/>
+            <rect x="73" y="19" width="6" height="2.5" rx="1.2" fill="#FFE066" transform="rotate(30 76 20)"/>
+            <rect x="80" y="34" width="6" height="2.5" rx="1.2" fill="#7FD6FF" transform="rotate(70 83 35)"/>
+            <rect x="52" y="35" width="6" height="2.5" rx="1.2" fill="#FFE066" transform="rotate(-60 55 36)"/>
+            <rect x="62" y="44" width="6" height="2.5" rx="1.2" fill="#FFFFFF" transform="rotate(15 65 45)"/>
+            <rect x="72" y="44" width="6" height="2.5" rx="1.2" fill="#7FD6FF" transform="rotate(-35 75 45)"/>
+        </svg>
+        <h1 class="logo">Donut Hut</h1>
+    </a>
 
-    <div>
-      
-<h3> Donuts Prices</h3>
-<ul>
-<li>Glazed Donut - $1.05</li>
-<li>Chocolate Donut-$1.10</li>
-<li>Fancy Donut-$1.30</li>
-<li>Apple Fritter-$1.50</li>
-<li>Cinnamon Roll-$1.50</li>
-<li>Eclairs /Long John-$1.60</li>
+    <nav>
+        <a href="#home" data-show-home>Home</a>
+        <a href="#menu" data-show-menu>Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="cart-summary">
+
+        <span>
+            Total: $<span id="cart-total">0.00</span>
+        </span>
+
+        <button class="cart-button" type="button">
+            🛍️ Cart (<span id="cart-count">0</span>)
+        </button>
+
+    </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="hero-label">FRESHLY BAKED EVERY DAY</p>
+
+            <h2>
+                A Little Happiness<br>
+                in Every Bite.
+            </h2>
+
+            <p class="hero-description">
+                Fresh donuts, delicious kolaches, and warm coffee
+                made to brighten your morning.
+            </p>
+
+            <a href="#menu" class="hero-button" data-show-menu>
+                Explore Our Menu
+            </a>
+        </div>
+
+        
+
+    </section>
+
+
+    <!-- Store Hours -->
+    <section class="store-hours">
+        <h2>Store Hours</h2>
+
+        <p>Tuesday - Sunday: 3:00 AM - 2:30 PM</p>
+        <p>MONDAY CLOSED!</p>
+    </section>
+
+
+    <!-- Location -->
+    <div class="location-container">
+
+        <a class="location-link"
+           href="https://maps.app.goo.gl/KkU7VSUEJZKyvbcB9">
+            Visit our location to experience freshness
+        </a>
+
+        <h2>For everyday fresh donut</h2>
+    </div>
+
+
+    <!-- Store Pictures -->
+    <div class="store-pictures">
+
+        <div class="pic">
+            <img class="front-image"
+                 src="Front store.jpg"
+                 alt="Store upfront">
+        </div>
+
+        <div class="pics">
+            <img class="front-image"
+                 src="years.jpg"
+                 alt="Store picture">
+        </div>
+
+        <div class="picture">
+            <img class="front-image"
+                 src="door.jpg"
+                 alt="Store entrance">
+        </div>
 
     </div>
 
 
-    <div>
-       
-        <h3> Kolache Prices</h3>
-<ul>
-<li>Regular sausage - $1.40</li>
-<li>Regular jalapeno sausage-$1.50</li>
-<li>Regular croissant sausage-$1.50</li>
-<li>Regular jalapeno croissant sausage-$1.60</li>
-<li>Jumbo regular sausage-$2.70</li>
-<li>Jumbo jalapeno sausage-$2.70</li>
+    <!-- Menu Section -->
+    <div id="menu-section" hidden>
+     <div class="menu-heading">
+    <p>FRESHLY MADE FOR YOU</p>
+    <h2>Explore Our Menu</h2>
+    <p>Discover our delicious selection of donuts, kolaches, and coffee.</p>
 
+    <div class="menu-tabs" role="tablist">
+        <button class="menu-tab active" type="button" role="tab" data-target="donut-grid">Donuts</button>
+        <button class="menu-tab" type="button" role="tab" data-target="kolache-grid">Kolaches</button>
+        <button class="menu-tab" type="button" role="tab" data-target="coffee-grid">Coffee</button>
+    </div>
+   </div>
+    <div class="menu-container">
+
+
+    <div class="product-grid donut-grid">
+
+    <article class="product-card">
+
+        <img src="Glazed Donut Dozen.jpg"
+             alt="Fresh glazed donuts">
+
+        <div class="product-info">
+            <h3>Glazed Donut</h3>
+
+            <p>A classic glazed donut, soft and sweet.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="glazed-option" aria-label="Glazed donut option">
+                    <option value="single" data-price="1.10" data-label="Glazed Donut">Single - $1.10 each</option>
+                    <option value="dozen" data-price="11.00" data-label="Glazed Donut (Dozen)">Dozen - $11.00</option>
+                </select>
+
+                <input class="qty-input" id="glazed-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="glazed-price">$1.10</span>
+
+                <button class="add-to-cart"
+                        id="glazed-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="choco.jpg" alt="Chocolate donuts">
+
+        <div class="product-info">
+            <h3>Chocolate Donut</h3>
+
+            <p>A delicious donut topped with chocolate frosting.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="choco-option" aria-label="Chocolate donut option">
+                    <option value="single" data-price="1.15" data-label="Chocolate Donut">Single - $1.15 each</option>
+                    <option value="dozen" data-price="12.00" data-label="Chocolate Donut (Dozen)">Dozen - $12.00</option>
+                </select>
+
+                <input class="qty-input" id="choco-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="choco-price">$1.15</span>
+
+                <button class="add-to-cart"
+                        id="choco-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="Mix.jpg" alt="Mixed donuts">
+
+        <div class="product-info">
+            <h3>Mixed Donut</h3>
+
+            <p>An assortment of our freshly made donuts.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="mix-option" aria-label="Mixed donut option">
+                    <option value="single" data-price="1.30" data-label="Mixed Donut">Single - $1.30 each</option>
+                    <option value="dozen" data-price="14.00" data-label="Mixed Donut (Dozen)">Dozen - $14.00</option>
+                </select>
+
+                <input class="qty-input" id="mix-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="mix-price">$1.30</span>
+
+                <button class="add-to-cart"
+                        id="mix-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="sugar.jpg" alt="Sugar donut">
+
+        <div class="product-info">
+            <h3>Sugar Donut</h3>
+
+            <p>A soft, fresh donut coated in sweet sugar.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="sugar-option" aria-label="Sugar donut option">
+                    <option value="single" data-price="1.10" data-label="Sugar Donut">Single - $1.10 each</option>
+                    <option value="dozen" data-price="12.00" data-label="Sugar Donut (Dozen)">Dozen - $12.00</option>
+                </select>
+
+                <input class="qty-input" id="sugar-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="sugar-price">$1.10</span>
+
+                <button class="add-to-cart"
+                        id="sugar-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="cinnamon.jpg" alt="Cinnamon roll">
+
+        <div class="product-info">
+            <h3>Cinnamon Roll</h3>
+
+            <p>Warm, soft and freshly baked with a sweet glaze.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="cinnamon-option" aria-label="Cinnamon roll option">
+                    <option value="single" data-price="1.60" data-label="Cinnamon Roll">Single - $1.60 each</option>
+                    <option value="dozen" data-price="18.00" data-label="Cinnamon Roll (Dozen)">Dozen - $18.00</option>
+                </select>
+
+                <input class="qty-input" id="cinnamon-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="cinnamon-price">$1.60</span>
+
+                <button class="add-to-cart"
+                        id="cinnamon-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="eclair.jpg" alt="Eclairs">
+
+        <div class="product-info">
+            <h3>Eclair</h3>
+
+            <p>Soft, fresh eclairs, plain or filled.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="eclair-filling" aria-label="Eclair filling">
+                    <option value="plain">No filling</option>
+                    <option value="bavarian">White Bavarian cream filling</option>
+                    <option value="raspberry">Raspberry jelly filling</option>
+                </select>
+            </div>
+
+            <div class="option-row">
+                <select class="option-select" id="eclair-option" aria-label="Eclair size">
+                    <option value="single" data-price="1.60" data-label="Eclair">Single - $1.60 each</option>
+                    <option value="dozen" data-price="18.00" data-label="Eclair (Dozen)">Dozen - $18.00</option>
+                </select>
+
+                <input class="qty-input" id="eclair-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="eclair-price">$1.60</span>
+
+                <button class="add-to-cart"
+                        id="eclair-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+</div>
+
+<!-- Kolache Product Grid -->
+<div class="product-grid kolache-grid" hidden>
+
+    <article class="product-card">
+
+        <img src="reg.jpg" alt="Regular kolache">
+
+        <div class="product-info">
+            <h3>Regular Kolache</h3>
+
+            <p>A soft, freshly baked sausage kolache.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="kolache-option" aria-label="Regular kolache option">
+                    <option value="single" data-price="1.40" data-label="Regular Kolache">Single - $1.40 each</option>
+                    <option value="dozen" data-price="14.00" data-label="Regular Kolache (Dozen)">Dozen - $14.00</option>
+                </select>
+
+                <input class="qty-input" id="kolache-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="kolache-price">$1.40</span>
+
+                <button class="add-to-cart"
+                        id="kolache-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="cro.jpg" alt="Regular croissant kolache">
+
+        <div class="product-info">
+            <h3>Regular Croissant Kolache</h3>
+
+            <p>A sausage kolache wrapped in a buttery croissant.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="croissant-option" aria-label="Regular croissant kolache option">
+                    <option value="single" data-price="1.50" data-label="Regular Croissant Kolache">Single - $1.50 each</option>
+                    <option value="dozen" data-price="15.00" data-label="Regular Croissant Kolache (Dozen)">Dozen - $15.00</option>
+                </select>
+
+                <input class="qty-input" id="croissant-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="croissant-price">$1.50</span>
+
+                <button class="add-to-cart"
+                        id="croissant-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="reg.jpg" alt="Regular jalapeno kolache">
+
+        <div class="product-info">
+            <h3>Regular Jalapeno Kolache</h3>
+
+            <p>A soft, freshly baked sausage kolache with jalapeno.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="jalapeno-option" aria-label="Regular jalapeno kolache option">
+                    <option value="single" data-price="1.50" data-label="Regular Jalapeno Kolache">Single - $1.50 each</option>
+                    <option value="dozen" data-price="15.00" data-label="Regular Jalapeno Kolache (Dozen)">Dozen - $15.00</option>
+                </select>
+
+                <input class="qty-input" id="jalapeno-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="jalapeno-price">$1.50</span>
+
+                <button class="add-to-cart"
+                        id="jalapeno-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="cro.jpg" alt="Regular jalapeno croissant kolache">
+
+        <div class="product-info">
+            <h3>Regular Jalapeno Croissant Kolache</h3>
+
+            <p>A sausage and jalapeno kolache wrapped in a buttery croissant.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="jalcroissant-option" aria-label="Regular jalapeno croissant kolache option">
+                    <option value="single" data-price="1.60" data-label="Regular Jalapeno Croissant Kolache">Single - $1.60 each</option>
+                    <option value="dozen" data-price="16.00" data-label="Regular Jalapeno Croissant Kolache (Dozen)">Dozen - $16.00</option>
+                </select>
+
+                <input class="qty-input" id="jalcroissant-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="jalcroissant-price">$1.60</span>
+
+                <button class="add-to-cart"
+                        id="jalcroissant-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="danish.jpg" alt="Cheese danish">
+
+        <div class="product-info">
+            <h3>Cheese Danish</h3>
+
+            <p>Crispy on the outside, creamy on the inside, with rich cream cheese filling.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="danish-option" aria-label="Cheese danish option">
+                    <option value="single" data-price="2.75" data-label="Cheese Danish">Single - $2.75 each</option>
+                </select>
+
+                <input class="qty-input" id="danish-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="danish-price">$2.75</span>
+
+                <button class="add-to-cart"
+                        id="danish-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="spinach.jpg" alt="Spinach pie">
+
+        <div class="product-info">
+            <h3>Spinach Pie</h3>
+
+            <p>Flaky, buttery pastry filled with savory spinach and creamy cheese.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="spinach-option" aria-label="Spinach pie option">
+                    <option value="single" data-price="3.89" data-label="Spinach Pie">Single - $3.89 each</option>
+                </select>
+
+                <input class="qty-input" id="spinach-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="spinach-price">$3.89</span>
+
+                <button class="add-to-cart"
+                        id="spinach-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img src="churro.jpg" alt="Fresh churros">
+
+        <div class="product-info">
+            <h3>Churro</h3>
+
+            <p>Crispy outside, soft inside, fresh and made just for you.</p>
+
+            <div class="option-row">
+                <select class="option-select" id="churro-filling" aria-label="Churro sugar option">
+                    <option value="sugar">Cinnamon sugar</option>
+                    <option value="nosugar">No sugar</option>
+                </select>
+            </div>
+
+            <div class="option-row">
+                <select class="option-select" id="churro-option" aria-label="Churro option">
+                    <option value="single" data-price="1.50" data-label="Churro">Single - $1.50 each</option>
+                </select>
+
+                <input class="qty-input" id="churro-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="churro-price">$1.50</span>
+
+                <button class="add-to-cart"
+                        id="churro-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+</div>
+
+<!-- Coffee Product Grid -->
+<div class="product-grid coffee-grid" hidden>
+
+    <article class="product-card">
+
+        <div class="coffee-photo">
+            <img class="cup-small" src="coffee-cup.jpg" alt="Small Coffee">
+        </div>
+
+        <div class="product-info">
+            <h3>Small Coffee</h3>
+
+            <p>A fresh hot cup of coffee.</p>
+
+            <p class="refill-note">Cup $1.90 &nbsp;|&nbsp; Refill $1.25</p>
+
+            <div class="option-row">
+                <select class="option-select" id="smallcoffee-option" aria-label="Small Coffee option">
+                    <option value="single" data-price="1.90" data-label="Small Coffee">Cup - $1.90 each</option>
+                    <option value="refill" data-price="1.25" data-label="Small Coffee Refill">Refill - $1.25 each</option>
+                </select>
+
+                <input class="qty-input" id="smallcoffee-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="smallcoffee-price">$1.90</span>
+
+                <button class="add-to-cart"
+                        id="smallcoffee-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <div class="coffee-photo">
+            <img class="cup-large" src="coffee-cup.jpg" alt="Large Coffee">
+        </div>
+
+        <div class="product-info">
+            <h3>Large Coffee</h3>
+
+            <p>A big, fresh hot cup of coffee.</p>
+
+            <p class="refill-note">Cup $2.75 &nbsp;|&nbsp; Refill $1.50</p>
+
+            <div class="option-row">
+                <select class="option-select" id="largecoffee-option" aria-label="Large Coffee option">
+                    <option value="single" data-price="2.75" data-label="Large Coffee">Cup - $2.75 each</option>
+                    <option value="refill" data-price="1.50" data-label="Large Coffee Refill">Refill - $1.50 each</option>
+                </select>
+
+                <input class="qty-input" id="largecoffee-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="largecoffee-price">$2.75</span>
+
+                <button class="add-to-cart"
+                        id="largecoffee-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="product-card">
+
+        <img class="box-photo" src="coffee-box.jpg" alt="Donut Hut Coffee Box">
+
+        <div class="product-info">
+            <h3>Coffee Box</h3>
+
+            <p>Serves approximately 12-14 people. Includes cups, lids, creamers, sugar and napkins.</p>
+
+            <p class="refill-note">Perfect for meetings, events &amp; group orders</p>
+
+            <div class="option-row">
+                <select class="option-select" id="coffeebox-option" aria-label="Coffee box option">
+                    <option value="box" data-price="40.00" data-label="Coffee Box">Coffee Box - $40.00</option>
+                </select>
+
+                <input class="qty-input" id="coffeebox-qty" type="number"
+                       min="1" max="99" value="1" aria-label="Quantity">
+            </div>
+
+            <div class="product-bottom">
+                <span class="price" id="coffeebox-price">$40.00</span>
+
+                <button class="add-to-cart"
+                        id="coffeebox-add"
+                        type="button">
+                    Add to Bag
+                </button>
+            </div>
+        </div>
+
+    </article>
+
+</div>
 
     </div>
 
-    <div> 
-    <h3>Coffee Prices</h3>  
-    <ul>
-        <li>Small Coffee -$1.90</li>
-        <li>Large Coffee- $2.75      </li>  
-        <li>  Small Coffee Refill- $1.25        </li>   
-         <li>  Large Coffee Refill -$1.50   </li>   
-        </li>
-    </ul>
-    </div>
-     
+    </div> <!-- end menu-section -->
 
-</div>
+<script src="script.js"></script>
 
-
-
-
- <div class="pic-container ">
-  <div> 
-    <h3>Dozen Donut Prices</h3>
-<div class="dozen-item">
-    <img class="menu-image" src="Glazed Donut Dozen.jpg" alt="Fresh glazed donuts">
-    
-    <p>Dozen Glazed Donut - $10.50</p>
-</div>
-<div class="dozen-item">
-     <img class="menu-image" src="choco.jpg" alt="Dozen chocolate donuts">
-   
-    <p>Dozen Chocolate Donut - $11.00</p>
-</div>
-<div class="dozen-item">
-    <img class="menu-image" src="Mix.jpg" alt="Mix dozen donuts">
-   
-    <p>Dozen Mix Donut - starts from $13.00 to $ 16.00</p>
-</div>
-</div>
-
-<div> 
-     <h3>Dozen Kolache</h3>
-       
-    <div class="dozen-item">
-    <img class="menu-image" src="reg.jpg" alt="regular kolache">
-   
-
-    <p>Dozen regular kolachee  - $14.00</p>
-     </div>
-     <div class="dozen-item">
-    <img class="menu-image" src="cro.jpg" alt="croissant kolache">
-   
-    <p>Dozen regular kolachee  - $14.00</p>
-     </div>
-
-
-
-    </div> 
-
-
-</div>
-
-
+</body>
+</html>

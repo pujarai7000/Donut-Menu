@@ -9,10 +9,7 @@ P{
     text-align:center;
 }
 body{
-    background-color:lightyellow;
-}
-body{
-    background-image:url("backy.PNG");
+    background-color:#FBE0E3;
 }
 .menu-image{
     
@@ -25,13 +22,32 @@ body{
     padding:10px 20px;
     border:2px solid black;
     border-radius:8px;
-    background-color:orange;
+    background-color:#C8102E;
+    color:white;
+    text-decoration:none;
     
 }
 
 .location-container{
     text-align:center;
     
+}
+
+/* Default font for the website */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Elegant font for headings */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navigation links and buttons */
+.navbar nav a,
+.cart-button,
+.hero-button {
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -53,8 +69,13 @@ body{
 }
 .menu-container{
     display:flex;
-    gap:100px;
+    flex-wrap:wrap;
+    gap:30px 100px;
     border:0.5px solid black;
+}
+.menu-container .product-grid{
+    flex:0 0 100%;
+    box-sizing:border-box;
 }
 .pic-container{
     display:flex;
@@ -91,4 +112,506 @@ body{
 .pic-container h3 {
     text-align: center;
 }
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #C8102E;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    font-size: 28px;
+    color: white;
+    margin: 0;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #FFD6DB;
+}
+
+.cart-button {
+    background-color: white;
+    color: #C8102E;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Menu Heading */
+
+.menu-heading {
+    text-align: center;
+    padding: 60px 20px 25px;
+    background-color: #FFF9F2;
+}
+
+.menu-heading h2 {
+    font-size: 38px;
+    color: #593B32;
+    margin: 12px 0;
+}
+
+.menu-heading p {
+    color: #765C52;
+    font-size: 16px;
+}
+
+/* Product Grid */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px 60px;
+    background-color: #FFF9F2;
+}
+
+/* Kolache grid: 2 per row (regular + croissant, then jalapeno versions) */
+
+.kolache-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* Individual Product Card */
+
+.product-card {
+    background-color: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.product-card .product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.product-card .product-bottom {
+    margin-top: auto;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: #593B32;
+    margin-top: 0;
+}
+
+.product-info p {
+    text-align: left;
+    color: #765C52;
+}
+
+/* Price and Button */
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #593B32;
+}
+
+.add-to-cart {
+    background-color: #C8102E;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #9E0B24;
+}
+
+.option-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.option-select,
+.qty-input {
+    padding: 8px 10px;
+    border: 1px solid #D9C7BD;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #593B32;
+    background: white;
+}
+
+.option-select { flex: 1; }
+.qty-input { width: 65px; }
+
+/* Mobile Layout */
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+
+.cart-summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    color: white;
+}
+/* Coffee grid: 2 per row, same cup photo shown smaller / larger */
+.coffee-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.coffee-grid .box-photo {
+    object-position: center 60%;
+}
+
+.coffee-grid .coffee-photo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(to bottom, #C3AA8B, #BEA386);
+}
+
+/* Fade the photo's edges into the background so no border shows */
+.coffee-grid .coffee-photo img {
+    width: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, #000 22%, #000 78%, transparent),
+        linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent, #000 22%, #000 78%, transparent),
+        linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+    mask-composite: intersect;
+}
+
+.refill-note {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #593B32;
+}
+
+.coffee-grid .coffee-photo img.cup-small { height: 68%; }
+.coffee-grid .coffee-photo img.cup-large { height: 96%; }
+
+/* Menu tabs */
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.menu-tab {
+    background-color: white;
+    color: #593B32;
+    border: 2px solid #C8102E;
+    border-radius: 25px;
+    padding: 10px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu-tab:hover {
+    background-color: #FDE3E6;
+}
+
+.menu-tab.active {
+    background-color: #C8102E;
+    color: white;
+}
+
+/* Make sure hidden grids stay hidden despite display:grid */
+.product-grid[hidden] {
+    display: none;
+}
+
+
+
+/* Red theme: hero banner */
+.hero {
+    background: linear-gradient(135deg, #9E0B24, #C8102E 55%, #E23B50);
+    padding: 90px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero p,
+.hero h2 {
+    color: white;
+}
+
+.hero-label {
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: white;
+    color: #C8102E;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-button:hover {
+    background-color: #FFD6DB;
+}
+
+.menu-heading > p:first-child {
+    color: #C8102E;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* Logo: cartoon hut + donut sign with the name */
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 82px;
+    height: 56px;
+}
+
+/* Store hours + location use a simple, bold font (Poppins) */
+.store-hours,
+.store-hours h2,
+.store-hours p,
+.location-container,
+.location-container h2,
+.location-link {
+    font-family: 'Poppins', sans-serif;
+}
+
+.store-hours h2,
+.location-container h2 {
+    font-weight: 800;
+    color: #C8102E;
+}
+
+.store-hours p,
+.location-link {
+    font-weight: 600;
+}
+
+/* Store pictures: rounded corners with a soft shadow */
+.store-pictures img {
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(200, 16, 46, 0.25);
+}
+
+/* Cart page */
+.cart-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cart-title {
+    color: #C8102E;
+    font-weight: 800;
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.cart-box {
+    background-color: white;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    color: #593B32;
+}
+
+.cart-box h3 {
+    margin-top: 0;
+    color: #C8102E;
+}
+
+.cart-box[hidden] {
+    display: none;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #F0E1E3;
+}
+
+.cart-item-name { font-weight: 600; }
+
+.cart-item-unit {
+    font-weight: 400;
+    font-size: 13px;
+    color: #765C52;
+}
+
+.cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-qty button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #C8102E;
+    background: white;
+    color: #C8102E;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cart-line-total { font-weight: 700; min-width: 70px; text-align: right; }
+
+.cart-remove {
+    background: none;
+    border: none;
+    color: #C8102E;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: inherit;
+}
+
+.cart-empty { text-align: center; }
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.tip-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.total-row {
+    font-size: 20px;
+    font-weight: 800;
+    border-top: 2px solid #F0E1E3;
+    margin-top: 8px;
+    padding-top: 12px;
+}
+
+#checkout-form label {
+    display: block;
+    margin: 12px 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.text-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #D9C7BD;
+    border-radius: 10px;
+    font-family: inherit;
+}
+
+.pay-options {
+    border: 1px solid #D9C7BD;
+    border-radius: 10px;
+    margin: 16px 0;
+}
+
+.pay-options label { font-weight: 500; }
+
+.form-error { color: #C8102E; font-weight: 600; }
+
+.place-order {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.order-done { max-width: 600px; margin: 0 auto; text-align: center; }
+
+@media (max-width: 768px) {
+    .cart-layout { grid-template-columns: 1fr; }
+    .cart-item { grid-template-columns: 1fr auto; }
 }
